@@ -26,4 +26,16 @@ public class Inputs {
 		} while(i < 0 || i > 8);
 		return i;
 	}
+
+	public static int getInt(int l1, int l2) {
+		int i = -1;
+		do {
+			try {
+				i = new Scanner(System.in).nextInt();
+			} catch (Exception e) {
+				System.err.println("Informe um número válido entre " + l1 + " e " + l2 + "!");
+			}
+		} while(i < l1 || i > l2);
+		return i;
+	}
 }
